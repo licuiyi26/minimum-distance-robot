@@ -55,5 +55,5 @@ for previous, move, nxt in previous_and_next(movements):
 
 print ("Final coordinates: (" + str(x) + "," + str(y) + ")")
 distance = abs(x) + abs(y)
-print ("The minimum amount of distance to get back to the starting point: " + str(distance))
+print ("The minimum amount of distance to get back to the starting point: " + str(distance) + "unit(s)")
 
