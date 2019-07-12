@@ -1,4 +1,3 @@
-import re
 from itertools import tee, islice, chain
 
 
@@ -14,7 +13,7 @@ directions = ["N", "E", "S", "W"]
 facing = directions.index("N")  # set the default facing direction of the robot to be north
 
 inputs = input("Please enter a string of commands （e.g. F1,R1,B2,L1,B3）：")
-movements = re.findall(r"[\w']+", inputs.upper())
+movements = [x.strip() for x in inputs.upper().split(',')]
 
 for previous, move, nxt in previous_and_next(movements):
     if previous is not None:
@@ -54,4 +53,3 @@ for previous, move, nxt in previous_and_next(movements):
 print ("Final coordinates: (" + str(x) + "," + str(y) + ")")
 distance = abs(x) + abs(y)
 print ("The minimum amount of distance to get back to the starting point: " + str(distance) + " unit(s)")
-
