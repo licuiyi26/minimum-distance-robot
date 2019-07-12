@@ -13,7 +13,7 @@ directions = ["N", "E", "S", "W"]
 facing = directions.index("N")  # set the default facing direction of the robot to be north
 
 # set inputs
-inputs = "F1,R1,B2,L1,B3"
+inputs = input("Please enter a string of commands: e.g. F1,R1,B2,L1,B3")
 movements = re.findall(r"[\w']+", inputs)
 
 for previous, move, nxt in previous_and_next(movements):
@@ -44,4 +44,6 @@ for previous, move, nxt in previous_and_next(movements):
             elif nxt[0] == "B":
                 x += int(nxt[1])
 
-print (x,y)
+# print (x,y)
+distance = abs(x) + abs(y)
+print(distance)
