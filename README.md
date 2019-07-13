@@ -6,13 +6,12 @@ The purpose is to get the minimum amount of distance for a robot to get back to 
 <br>
 <h3> How to Execute and Test the Code </h3>
 * Download the robot.py to your IDE then run it! <br>
-* Enter the commands by using a comma to seperate them! (Notes: You can enter the commands in either lowercase or uppercase) <br>
-* <i>OR</i> please go to the link here for live demo: https://trinket.io/python3/94ac1c5673 <br>
+* Enter the commands by using a comma to separate them! (Notes: You can enter the commands in either lowercase or uppercase) <br>
+* <i>OR</i> please go to the link here for live demo: https://trinket.io/python3/9c92c97579 <br>
 <br>
 <h3> Design Decision </h3>
 * At the starting point, the robot is set to face <strong> North </strong> by default.<br>
-* The string is split based on a comma, so if you enter the commands wrongly, it will not take the wrong commands in.<br>
-** The robot in this program CANNOT move forward or backward consecutively more than once, e.g. F1,B3 <br>
+* The string is split based on a comma, so if you enter any commands wrongly, the robot will ignore them.<br>
 <br>
 <h3> Logic Behind It </h3>
 * Firstly, check if the first command asks the robot to turn or move. <br>
