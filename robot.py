@@ -13,8 +13,7 @@ directions = ["N", "E", "S", "W"]
 facing = directions.index("N")  # set the default facing direction of the robot to be north
 
 inputs = input("Please enter a string of commands （e.g. F1,R1,B2,L1,B3）：")
-movements = re.findall('([F|B|L|R][0-9])*', inputs.upper())  # validation
-movements = filter(None, movements)  # remove the empty string
+movements = re.findall("['\'F|'\'B|'\'R|'\'L][0-9]+", inputs.upper())  # validation
 
 for previous, move in previous_and_current(movements):
     if previous is not None:

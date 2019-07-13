@@ -7,7 +7,7 @@ The purpose is to get the minimum amount of distance for a robot to get back to 
 <h3> How to Execute and Test the Code </h3>
 * Download the robot.py to your IDE then run it! <br>
 * Enter the commands by using a comma to separate them! (Notes: You can enter the commands in either lowercase or uppercase) <br>
-* <i>OR</i> please go to the link here for live demo: https://trinket.io/python3/9c92c97579 <br>
+* <i>OR</i> please go to the link here for live demo: https://trinket.io/python3/eb4b91c483 <br>
 <br>
 <h3> Design Decision </h3>
 * At the starting point, the robot is set to face <strong> North </strong> by default.<br>
