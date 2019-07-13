@@ -1,12 +1,10 @@
-import re
-from itertools import tee, islice, chain
+from itertools import tee, chain
 
 
 def previous_and_next(movements_array):
-    prevs, items, nexts = tee(movements_array, 3)
+    prevs, items = tee(movements_array, 2)
     prevs = chain([None], prevs)
-    nexts = chain(islice(nexts, 1, None), [None])
-    return zip(prevs, items, nexts)
+    return zip(prevs, items)
 
 
 x, y = 0, 0
@@ -14,16 +12,16 @@ directions = ["N", "E", "S", "W"]
 facing = directions.index("N")  # set the default facing direction of the robot to be north
 
 inputs = input("Please enter a string of commands （e.g. F1,R1,B2,L1,B3）：")
-movements = re.findall(r"[\w']+", inputs.upper())
+movements = [x.strip() for x in inputs.upper().split(',')]
 
-for previous, move, nxt in previous_and_next(movements):
+for previous, move in previous_and_next(movements):
     if previous is not None:
         if previous[0] == "R":
             facing = (facing + int(previous[1])) % 4
         elif previous[0] == "L":
             facing = (facing - int(previous[1])) % 4
         else:
-            continue
+            continue  # if previous[0] is "F" or "B", skip it
 
         if move[0] == "F":
             if directions[facing] == "N":
